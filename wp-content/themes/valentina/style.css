@@ -1181,6 +1181,7 @@ button.af-submit-button {
     justify-content: center;
     align-content: center;
     align-items: center;
+    padding: 1rem;
   }
 
   .title h1 {
@@ -1202,7 +1203,7 @@ button.af-submit-button {
     width: 100%;
   }
   .intro-title {
-    padding-right: 10px;
+    padding-right: 0px;
   }
   .background {
     width: 100vw;
@@ -1345,6 +1346,9 @@ button.af-submit-button {
     height: auto;
     justify-content: center;
   }
+  .menu-icon {
+    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(240deg) brightness(104%) contrast(102%);
+  }
 
   .family-container {
    transform: scale(0.8);
@@ -1465,9 +1469,5 @@ button.af-submit-button {
   a.contact-button {
     font-size: 15px;
   }
-  .menu-icon {
-    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(240deg) brightness(104%) contrast(102%);
-  }
-
 }
 
