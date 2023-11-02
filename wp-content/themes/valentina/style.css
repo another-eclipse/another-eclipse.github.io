@@ -1463,5 +1463,9 @@ button.af-submit-button {
   a.contact-button {
     font-size: 15px;
   }
+  .menu-icon {
+    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(240deg) brightness(104%) contrast(102%);
+  }
+
 }
 
