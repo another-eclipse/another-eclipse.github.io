@@ -1286,6 +1286,9 @@ button.af-submit-button {
   .page-title h2 {
     font-size: 30px;
   }
+  .p-title {
+    padding: 1rem;
+  }
   .about-me-intro{
     display: grid;
   }
@@ -1298,8 +1301,7 @@ button.af-submit-button {
   width: 90%;
   }
   .profile-image {
-    height: 200px;
-  width: 200px;
+    width: 60%;
   border-radius: 50%;
   z-index: 10;
   position: relative;
@@ -1307,10 +1309,26 @@ button.af-submit-button {
     left: -1%;
   }
   .profile-text-container{
-    width: 90%;
+    width: 100%;
+    padding: 1rem;
   }
   .hobby {
     display: grid;
+  }
+  .project-text {
+    padding: 1rem;
+    justify-items: center;
+  }
+  .coding-container, .beginning-container {
+    padding: 1rem;
+  }
+  .form-container {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+
+  .af-form{
+    padding: 1rem;
   }
   .hobby-text{
     display: grid;
@@ -1318,6 +1336,7 @@ button.af-submit-button {
     width: 100%;
     margin-right: auto;
     margin-bottom: 1rem;
+    padding: 1rem;
   }
   .hobby-images {
     display: grid;
@@ -1336,21 +1355,23 @@ button.af-submit-button {
   }
   .family {
     position: static;
+    height: 100%;
   }
   .image-title {
     opacity: 1;
   }
   .overlay1{
-    top: 35%;
+    top: 0%;
     right: auto;
   }
   .title1, .title2, .title3 {
-    top: auto;
+    top: -3%;
     right: auto;
+    font-size: 120%;
   }
 
   .overlay2, .overlay3 {
-    top: 30%;
+    top: 0%;
     right: auto;
   }
   .fact-container{
@@ -1358,9 +1379,10 @@ button.af-submit-button {
     width: 80%;
   }
   .fact-separator{
-    top: 11%;
-  left: 22%;
-  width: 51%;
+    top: -31%;
+    left: 22%;
+    height: 98%;
+    width: 50%;
   }
   a#select{
     position:relative;
@@ -1378,6 +1400,7 @@ button.af-submit-button {
   
   .project-type-container {
     display: block;
+    padding: 1rem;
   }
   .project-background-container, .project-background {
     width: 100%;
@@ -1411,7 +1434,7 @@ button.af-submit-button {
   .top-img3 {
     width: 23%;
     left: 39%;
-    top: -39%;
+    top: -41%;
   }
 
   .top-img2 {
