@@ -1,0 +1,1379 @@
+/*
+Theme name: Valentina's First Theme
+Text Domain: Valentina
+Version: 1.0
+Thumbnail:
+Description: A theme for my own website
+Author: Valentina N
+*/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  max-width: 1920px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color:#ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+@font-face {
+  font-family: 'ModernLove';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/ModernLove.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ModernLoveCaps';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/ModernLoveCaps.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ModernLoveGrunge';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/ModernLoveGrunge.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Gill';
+  font-style: normal;
+  font-weight: normal;
+  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/Gill.TTF') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100%;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-family: 'ModernLove';
+  font-size:60px;
+}
+
+h2 {
+  font-family: 'ModernLoveCaps';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 65px; /* 130% */
+  letter-spacing: -1.5px;
+}
+
+h3 {
+  font-family: 'ModernLoveCaps';
+  font-size: 30px;
+}
+
+label {
+  font-family: 'Gill';
+  font-size: 20px;
+  display: none;
+}
+
+p {
+  font-family:'Gill', sans-serif;
+  font-size: 18px;
+}
+
+
+
+.main-wrapper {
+  align-self: center;
+  justify-items: center;
+  margin: 5%;
+  z-index: 10;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0% 5% 0% 5%;
+  display: flex;
+  justify-content: flex-start;
+  position:relative;
+  z-index: 5;
+  background-color: #66785b;
+  text-wrap: nowrap;
+}
+
+.mobile-menu {
+  display:none;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  position: flex-end;
+  cursor:pointer;
+}
+
+
+
+#navmenu {
+  width: 80%;
+  position:relative;
+  align-items: center;
+  align-self: center;
+  color: white;
+}
+
+ul {
+  justify-content: center;
+}
+
+li {
+  font-family: 'ModernLoveCaps';
+  font-size: x-large;
+  font-style: normal;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  font-family: 'ModernLoveCaps';
+  color: white;
+  text-decoration: none;
+  text-shadow: 0px 0px;
+  transition: all 0.4s;
+  text-shadow: 0px 0px 10px transparent;
+}
+
+a:hover, .mobile-menu:hover{
+  text-shadow: 0px 0px 10px white;
+}
+
+.logo {
+  display: flex;
+  position: flex-start;
+}
+.custom-logo {
+  height: 60px;
+  width: auto;
+  margin: 10px;
+  position: relative;
+  transition: all 0.4s;
+}
+
+img.custom-logo:hover {
+  filter: drop-shadow(0px 0px 10px white);
+}
+
+.sub-menu {
+  display:hidden;
+  opacity: 0;
+  position:absolute;
+  padding: 0px 3px 1rem 3px;
+  margin-top: 2.5rem;
+  z-index: -5;
+  height: 0;
+  width: 180px;
+  transition: all 0.5s;
+  background-color: #66785b;
+  border-radius: 0px 0px 15px 15px;
+  overflow: hidden;
+}
+
+.navbar ul li:hover > .sub-menu {
+  z-index: 1;
+  opacity: 1;
+  display: block;
+  height: 130px;
+ }
+
+ .icons {
+  display: flex;
+  position: flex-end;
+ }
+ .icon {
+  height: 36px;
+  width: auto;
+  margin: 10px;
+  transition: all 0.4s;
+ }
+
+ img.icon:hover {
+  filter: drop-shadow(0px 0px 10px white);
+ }
+
+ .start {
+  display: grid;
+  background: #cad8d6;
+ }
+
+.background {
+  background: #cad8d6;
+  padding: 10rem;
+display: grid;
+position: relative;
+width: 100%;
+align-content: center;
+}
+
+.background-img {
+  position: absolute;
+  width: 50%;
+  top:-127%;
+  left: 23%;
+  z-index: 0;
+  justify-self: center;
+  align-self: center;
+}
+
+
+.title {
+  display: grid;
+  position: relative;
+  text-align: center;
+  top: 30%;
+  width: 100%;
+  color: black;
+  padding: 10rem;
+  z-index: 1;
+}
+
+
+
+.introduction {
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  z-index: 2;
+}
+
+.intro-text {
+  display: grid;
+  background-color:#cad8d6;
+  text-align: right;
+  justify-content: center;
+  color: black;
+  height: 600px;
+  padding: 3rem;
+  width:50%;
+  outline: 2px solid black;
+  outline-offset: -20px;
+  z-index: 2;
+}
+
+.intro-title {
+  display: grid;
+  align-items: end;
+}
+
+.separator-img {
+  display: grid;
+  position: absolute;
+  top: 71px;
+  left: 42%;
+  height: 80%;
+  z-index: 3;
+}
+
+.intro-images {
+  padding: 0 3rem 0 3rem;
+  width: 50%;
+  height: 600px;
+}
+
+.swiper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  margin-left: 20px;
+  padding-left: 20px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.plant-overlay {
+  display: grid;
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.plant-overlay-img {
+  display: block;
+  position: relative;
+  z-index: 6;
+  z-index: 1;
+  height: 656px;
+  top: -36px;
+  right: -43px;
+}
+.top-image {
+  display: block;
+  position: relative;
+  object-fit: contain;
+}
+
+.top-img{
+  display: block;
+  position: relative;
+  width: 50%;
+  left: 24%;
+  top: -17%;
+
+}
+
+.projects-summary {
+  display: grid;
+  color: rgb(0, 0, 0);
+  padding: 3rem;
+  outline: 2px solid black;
+  outline-offset: -20px;
+  margin: 4%;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+}
+
+.project-container {
+  background-color: #904a3c;
+  padding: 3rem;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+}
+
+.project-list a div h3 {
+  z-index: 4;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  object-fit: cover;
+  z-index: 6;
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -20px;
+  z-index: 6;
+  filter: grayscale(100%);
+}
+
+.project-image:hover {
+  transform: scale(1.2);
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -41px;
+  filter: grayscale(0%);
+}
+.plant-overlay2 {
+  display: grid;
+  position: absolute;
+  width: 90%;
+  object-fit: cover;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+}
+.plant-overlay-img2 {
+  transform: rotate(90deg);
+  width: 285px;
+  height: auto;
+  position: relative;
+  left: -32%;
+  top: -14%;
+  z-index: 2;
+}
+
+.contact-banner {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  position:relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #cad8d6;
+}
+
+.banner-background-container {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-banner-background {
+  display: block;
+  position: absolute;
+  width: 51%;
+  z-index: 3;
+  left: 25%;
+  user-select: none;
+  pointer-events:none;
+}
+
+.contact-text {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  z-index: 2;
+  outline: 2px solid black;
+  outline-offset: -55px;
+}
+
+a.contact-button {
+  font-size: 30px;
+  display: grid;
+  padding: 1rem;
+  padding: 0% -70% 0% -70%;
+  background-color: white; 
+  color: black;
+  outline: 2px solid #d99798;
+
+  z-index: 4;
+}
+
+a.contact-button:hover {
+  background-color: #d99798;
+  color: white;
+  padding: 0% -70% 0% -70%;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -10px;
+}
+
+.contact-text-top {
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  color: black;
+  width:100%;
+  z-index: 5;
+  margin-top: 2%;
+}
+
+
+.footer {
+  background-color: #66785b;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.footer-item {
+  font-size: 50px;
+  z-index: 20;
+  display: flex;
+  position:relative;
+  justify-items: center;
+}
+
+.footer-meta {
+  background-color: #66785b;
+  display: flex;
+  position: inline;
+  justify-content: space-between;
+  padding: 1%;
+  width: 100%;
+  color: white;
+}
+
+.footer-meta-item {
+  font-family: "Gill";
+}
+
+
+/* About Me  */
+
+.page-title {
+  position: relative;
+  display: grid;
+  padding: 3rem;
+  background-color: #cad8d6;
+  justify-items: center;
+  overflow: visible;
+}
+
+.line {
+  width: 90%;
+  color: black;
+  position:relative;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.leaf {
+  position: absolute;
+  height: 32%;
+  top: 53%;
+  transform: rotate(-0.9turn);
+}
+
+.about-me-intro, .hobby {
+  display: flex;
+}
+
+.profile-container {
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.profile-text-container {
+  display: grid;
+  position: relative;
+  height: 600px;
+  width: 50%;
+  padding: 3rem;
+  text-align: left;
+}
+
+.p-title {
+  align-self: end;
+}
+
+.profile-overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.profile-image {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+  top: 12%;
+  left: 25%;
+}
+
+.hobby-text {
+  display: grid;
+  position: relative;
+  height: 700px;
+  margin-right: 1rem;
+  width: 50%;
+  padding: 3rem;
+  text-align: right;
+  outline: 2px solid black;
+}
+
+.hobby-images {
+  padding: 3rem;
+  width: 50%;
+  display: block;
+  position: relative;
+  background-color: #cad8d6;
+}
+
+.family {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border: 10px solid white;
+  transition: all 0.4s ease-in-out;
+}
+
+.family-container:hover .family {
+  box-shadow: 0px 0px 40px 15px white;
+}
+
+.family-overlay {
+  position: absolute;
+  height: 235px;
+  width: 235px;
+  z-index: 10;
+}
+
+.overlay1 {
+  top: 44%;
+  right: 51%;
+}
+
+.overlay2 {
+  top: 67%;
+  right: 10%;
+}
+
+.overlay3 {
+  
+  top: 12%;
+  right: 18%;
+}
+
+.mom {
+  top: 59%;
+  right: 12%;
+}
+
+.dad {
+  top: 36%;
+  right: 54%;
+}
+.dave {
+  top: 4%;
+  right: 20%;
+}
+
+
+.image-title {
+  position: absolute;
+  z-index: 10;
+  font-family: 'ModernLove';
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+.title1 {
+  top: 68%;
+  right: 57%;
+}
+
+.title2 {
+  top: 91%;
+  right: 10%;
+}
+
+
+.title3 {
+  top: 36%;
+  right: 21%;
+}
+
+.mom-container:hover .title2 {
+  display: block;
+  opacity: 1;
+}
+
+.dad-container:hover .title1 {
+  display: block;
+  opacity: 1;
+}
+
+.dave-container:hover .title3 {
+  display: block;
+  opacity: 1;
+}
+
+#result-hidden {
+  display: none;
+}
+
+#select {
+  cursor: pointer;
+  user-select: none;
+  margin: 1rem;
+  width: 90%;
+  background-color: white;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
+  color: black;
+  opacity: 0;
+}
+
+a#select { 
+  font-size: large;
+  z-index: 11;
+ 
+}
+
+p#result {
+  display: grid;
+  position: relative;
+  padding: 1rem;
+  align-content: center;
+  height: 100px;
+  background-color: #ffffff;
+}
+
+p#result:empty:not(:focus)::before {
+  content: attr(placeholder);
+}
+
+.fun-fact {
+  font-size: x-large;
+
+}
+
+.facts {
+  display: grid;
+  position: relative;
+  background-color:#cad8d6;
+  align-content:center;
+  height: 500px;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -20px;
+}
+
+.facts h3 {
+  margin: 1rem;
+  width: 90%;
+  padding: 1rem;
+}
+
+.fact-separator {
+  position: absolute;
+  transform: rotate(90deg);
+  top: -6%;
+  left: 30%;
+  width: 36%;
+  z-index: 10;
+}
+
+.fact-container {
+  background: white;
+  width: 90%;
+  display: grid;
+  position: relative;
+}
+
+
+/* My Projects */
+
+.project-type-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 3rem;
+  background-color:#cad8d6;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -20px;
+ 
+}
+
+.project-background-container {
+  display: flex;
+  position: relative;
+  width:100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.project-background {
+  height: 100%;
+  width: 400px;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+.project-text {
+  display: grid;
+  position: relative;
+  text-align: left;
+  align-content: center;
+  padding: 3rem;
+  background-color: white;
+}
+
+.project-type-description{
+  width: 70%;
+}
+
+.decoration-container {
+  display: hidden;
+}
+
+.project-decoration {
+  position: absolute;
+  top: 65%;
+  right: 81%;
+  width: 35%;
+  user-select: none;
+  pointer-events:none;
+}
+
+.project-type-link {
+  display: inline-block;
+  width: fit-content;
+  color: black;
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0px 0px 0px black;
+}
+
+.project-type-link h3 {
+  display: inline-block;
+}
+
+.project-type-link:hover {
+  text-shadow: 0px 0px 5px black;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  opacity: 0;
+  transition: .6s ease-in-out;
+  background-color:transparent;
+  user-select: none;
+  pointer-events:none;
+  overflow: hidden;
+}
+
+.project-background-container:hover .project-overlay {
+  opacity: 1;
+}
+.project-background-container:hover .project-background {
+  filter: grayscale(100%) brightness(70%);
+  
+}
+
+.overlay-image {
+  height: 100%;
+  filter: invert(95%) sepia(11%) saturate(167%) hue-rotate(121deg) brightness(90%) contrast(89%);
+}
+
+a.fcc-link {
+  color: black;
+  font-family: 'Gill';
+  font-size: 18px;
+  text-decoration-line: underline;
+}
+
+
+/* Coding */
+
+.coding-container, .beginning-container {
+  background:#cad8d6;
+  display:grid;
+  padding: 3rem;
+  justify-items: center;
+}
+
+.coding-links {
+  display: inline;
+  background: white;
+  padding: 3rem;
+  padding-top: 6rem;
+  width: 70%;
+  outline: 2px solid rgb(0, 0, 0);
+  outline-offset: -20px;
+}
+
+.bullet {
+  height: 18px;
+  display:inline-block;
+  position: relative;
+  padding-right:0.5rem;
+  margin-top: -7px;
+}
+
+.coding-link {
+  color: black;
+  transition: all 0.4s ease-in-out;
+}
+
+.coding-link:hover {
+  text-decoration-line: underline;
+}
+
+.top-img2 {
+  display: block;
+  position: absolute;
+  width: 33%;
+  left: 32%;
+  margin-top: -5rem;
+}
+.top-img3 {
+  display: block;
+  position: absolute;
+  width: 35%;
+  left: 32%;
+  margin-top: -13rem;
+  transform: rotate(90deg);
+  user-select: none;
+  pointer-events:none;
+}
+
+/* Sewing */
+
+.container{
+  width: 100vw;
+  margin: auto;
+}
+
+.subcontainer{
+  width: 90%;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  overflow-x: hidden;
+}
+
+.img {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.sewing-gallery {
+  display: grid;
+  justify-items: center;
+  padding: 3rem;
+}
+
+.sewing-gallery h3{
+  padding: 3rem;
+  margin: 2rem;
+  background-color: #cad8d6;
+  width: 90%;
+  object-fit: contain;
+  outline: 2px solid rgb(255, 255, 255);
+  outline-offset: -20px;
+}
+
+/* Contact */
+
+.acform {
+  display: grid;
+  justify-items: center;
+  background:#cad8d6;
+}
+
+.form-container {
+  background:#cad8d6;
+  padding: 5%;
+}
+
+.af-form {
+  display: block;
+  width: 40%;
+  background:#ffffff;
+  padding: 3rem;
+  outline: 1px solid rgb(0, 0, 0);
+  outline-offset: -20px;
+}
+
+
+.af-submit {
+  display:grid;
+}
+
+button.af-submit-button {
+  font-family: 'ModernLoveCaps';
+  font-size: 30px;
+  display: grid;
+  justify-self: center;
+  padding: 1rem;
+  padding: 0% -70% 0% -70%;
+  background-color: white; 
+  color: black;
+  outline: 1px solid #000000;
+  z-index: 4;
+  border-style: none;
+  transition: all 0.4s ease-in-out;
+  width: 97%;
+}
+
+.af-submit-button:hover {
+  background-color: #d99798;
+  color: white;
+  padding: 0% -70% 0% -70%;
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: -10px;
+}
+
+.af-input input, .af-input textarea{
+  border: none;
+  background-color: #d9979852;
+}
+
+.form-label label {
+  display: none !important;
+}
+
+.plant-container {
+  display: block;
+  position: relative;
+}
+
+.leaf3 {
+  transform: rotate(180deg);
+  position: absolute;
+  top: 422px;
+  left: 59%;
+  width: 21%;
+}
+
+/* Mobile */
+
+/* Header */
+
+.mobile-nav-menu {
+  display:none;
+  top: 45% !important;
+}
+
+.mobile-menu img {
+  height: 60px;
+  width: 60px;
+}
+
+
+@media screen and (max-width: 800px) {
+  #navmenu, .icon, .logo {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    justify-content: space-between;
+    display:grid;
+    position: static;
+    top:0;
+    z-index: 20;
+  }
+
+  .mobile-nav-menu {
+    top: 35%;
+    position: relative;
+    z-index: 20;
+  }
+  .mobile-menu {
+    display: flex;
+    position: absolute;
+    left: 5%;
+  }
+  .navitem {
+    display: flex;
+    padding: 15px;
+    margin-top: -1px;
+    margin-left: -20%;
+    background-color:#66785b;
+  }
+  .flex-row {
+    flex-direction: column !important;
+    align-items: start;
+  }
+  .mobile-menu:hover .mobile-nav-menu {
+    display:grid;
+    justify-content: start;
+    width: 100%;
+    
+  }
+  .navbar ul li:hover > .sub-menu {
+    display: none;
+  }
+}
+
+/* Mobile Home */
+
+@media screen and (max-width: 800px) {
+  .start {
+    width: 100%;
+    height: 400px;
+  }
+
+  .background-img {
+    position: absolute;
+    left: auto;
+    top: -97%;
+    width: 60%;
+    
+  }
+
+  .title {
+    top:0;
+    width: 90%;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
+
+  .title h3 {
+    font-size: 15px;
+  }
+  .introduction {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+  }
+  
+  .intro-text {
+    width: 100%;
+  }
+  .intro-title {
+    padding-right: 10px;
+  }
+  .background {
+    width: 100vw;
+  }
+  .swiper {
+    display: none !important;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 15px;
+    padding: 10px;
+  }
+  
+  .separator-img{
+    top: 405px;
+    left: 0%;
+    height: 43%;
+    transform: rotate(-90deg);
+    width: 100vw;
+  }
+  .top-img {
+    width: 50vw;
+  left: 10%;
+  top: -45%;
+  }
+  .project-list {
+    display: block;
+  }
+  .contact-banner {
+    height: 400px;
+  }
+  .contact-banner-background{
+    width: 100%;
+    left: 0;
+  }
+  .contact-text, .contact-text-top {
+    width: 80%;
+    outline: none;
+    justify-items: center;
+  }
+  .contact-text-top h3, .contact-text h3 {
+    padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15px;
+  }
+  .contact-button {
+    width: 50%;
+  }
+  .footer-meta-item{
+    font-size: 10px;
+
+  }
+  .footer-item {
+    font-size: 25px;
+  }
+  .plant-overlay2 {
+    width: 75%;
+  }
+  .page-title h2 {
+    font-size: 30px;
+  }
+  .about-me-intro{
+    display: grid;
+  }
+  .profile-container{
+    width: 90%;
+  }
+  .profile-overlay {
+    top: 5%;
+    left: 0%;
+  width: 90%;
+  }
+  .profile-image {
+    height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: 10;
+  position: relative;
+  top: 27%;
+  left: 24%;
+  }
+  .profile-text-container{
+    width: 90%;
+  }
+  .hobby {
+    display: grid;
+  }
+  .hobby-text{
+    display: grid;
+    height: auto;
+    width: 100%;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
+  .hobby-images {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+
+  .family-container {
+   transform: scale(0.8);
+   display: grid;
+   position: relative;
+   padding: 2rem;
+   justify-items: center;
+  }
+  .family {
+    position: static;
+  }
+  .image-title {
+    opacity: 1;
+  }
+  .overlay1{
+    top: 35%;
+    right: auto;
+  }
+  .title1, .title2, .title3 {
+    top: auto;
+    right: auto;
+  }
+
+  .overlay2, .overlay3 {
+    top: 30%;
+    right: auto;
+  }
+  .fact-container{
+    display: block;
+    width: 80%;
+  }
+  .fact-separator{
+    top: 38%;
+  left: 22%;
+  width: 51%;
+  }
+  a#select{
+    position:relative;
+  }
+  .fun-fact{
+    font-size: 18px;
+  }
+  
+  .project-type-container {
+    display: block;
+  }
+  .project-background-container, .project-background {
+    width: 100%;
+  height: 100%;
+  }
+  .project-type-description{
+    width: 100%;
+  }
+  .project-overlay {
+    top: auto;
+    bottom: auto;
+    width: 100%;
+  }
+  .project-decoration{
+    top: 87%;
+  right: 33%;
+  }
+  .img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+  }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sewing-gallery {
+    padding: 0.1rem !important;
+  }
+  .top-img3 {
+    margin-top: -7rem;
+  }
+  .af-form {
+    width: 80%;
+  }
+  .leaf3 {
+    top: 551px;
+  left: 73%;
+  }
+  .coding-links {
+    width: 100%;
+  }
+}
+
