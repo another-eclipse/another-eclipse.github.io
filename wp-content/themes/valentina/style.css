@@ -63,25 +63,25 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: 'ModernLove';
   font-style: normal;
   font-weight: normal;
-  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/ModernLove.ttf') format('truetype');
+  src: url('assets/fonts/ModernLove.ttf') format('truetype');
 }
 @font-face {
   font-family: 'ModernLoveCaps';
   font-style: normal;
   font-weight: normal;
-  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/ModernLoveCaps.ttf') format('truetype');
+  src: url('assets/fonts/ModernLoveCaps.ttf') format('truetype');
 }
 @font-face {
   font-family: 'ModernLoveGrunge';
   font-style: normal;
   font-weight: normal;
-  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/ModernLoveGrunge.ttf') format('truetype');
+  src: url('assets/fonts/ModernLoveGrunge.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Gill';
   font-style: normal;
   font-weight: normal;
-  src: url('https://another-eclipse.github.io/wp-content/themes/valentina/assets/fonts/Gill.TTF') format('truetype');
+  src: url('assets/fonts/Gill.TTF') format('truetype');
 }
 
 * {
@@ -96,6 +96,8 @@ main {
 h1 {
   font-family: 'ModernLove';
   font-size:60px;
+  z-index: 4;
+  align-self: end;
 }
 
 h2 {
@@ -110,6 +112,7 @@ h2 {
 h3 {
   font-family: 'ModernLoveCaps';
   font-size: 30px;
+  z-index: 4;
 }
 
 label {
@@ -246,6 +249,7 @@ img.custom-logo:hover {
  .start {
   display: grid;
   background: #cad8d6;
+  height: 800px;
  }
 
 .background {
@@ -260,7 +264,7 @@ align-content: center;
 .background-img {
   position: absolute;
   width: 50%;
-  top:-127%;
+  top: auto;
   left: 23%;
   z-index: 0;
   justify-self: center;
@@ -272,7 +276,6 @@ align-content: center;
   display: grid;
   position: relative;
   text-align: center;
-  top: 30%;
   width: 100%;
   color: black;
   padding: 10rem;
@@ -315,9 +318,10 @@ align-content: center;
   display: grid;
   position: absolute;
   top: 71px;
-  left: 42%;
+  right: -68px;
   height: 80%;
   z-index: 3;
+  width: 100%;
 }
 
 .intro-images {
@@ -553,6 +557,10 @@ a.contact-button:hover {
   font-family: "Gill";
 }
 
+.mobile-contact {
+  display: none;
+}
+
 
 /* About Me  */
 
@@ -586,11 +594,10 @@ a.contact-button:hover {
 }
 
 .profile-container {
-  display: block;
+  display: grid;
   position: relative;
-  justify-content: center;
-  align-items: center;
   width: 50%;
+  height: 50%;
 }
 
 .profile-text-container {
@@ -609,17 +616,17 @@ a.contact-button:hover {
 .profile-overlay {
   position: absolute;
   top: 0%;
-  left: 0%;
+  left: -4%;
 }
 
 .profile-image {
-  height: 400px;
-  width: 400px;
+  width: 60%;
   border-radius: 50%;
   z-index: 10;
-  position: relative;
-  top: 12%;
-  left: 25%;
+  position: absolute;
+  margin: 10%;
+  justify-self: center;
+
 }
 
 .hobby-text {
@@ -792,10 +799,11 @@ p#result:empty:not(:focus)::before {
 .fact-separator {
   position: absolute;
   transform: rotate(90deg);
-  top: -6%;
+  top: 2%;
   left: 30%;
   width: 36%;
   z-index: 10;
+  height: 100%;
 }
 
 .fact-container {
@@ -854,9 +862,8 @@ p#result:empty:not(:focus)::before {
 
 .project-decoration {
   position: absolute;
-  top: 65%;
+  height: 56%;
   right: 81%;
-  width: 35%;
   user-select: none;
   pointer-events:none;
 }
@@ -925,6 +932,7 @@ a.fcc-link {
 
 .coding-links {
   display: inline;
+  position: relative;
   background: white;
   padding: 3rem;
   padding-top: 6rem;
@@ -960,9 +968,9 @@ a.fcc-link {
 .top-img3 {
   display: block;
   position: absolute;
-  width: 35%;
-  left: 32%;
-  margin-top: -13rem;
+  height: 100%;
+  left: 47%;
+  top: -35%;
   transform: rotate(90deg);
   user-select: none;
   pointer-events:none;
@@ -1015,6 +1023,7 @@ a.fcc-link {
 
 .acform {
   display: grid;
+  position: relative;
   justify-items: center;
   background:#cad8d6;
 }
@@ -1026,6 +1035,7 @@ a.fcc-link {
 
 .af-form {
   display: block;
+  
   width: 40%;
   background:#ffffff;
   padding: 3rem;
@@ -1079,8 +1089,8 @@ button.af-submit-button {
 .leaf3 {
   transform: rotate(180deg);
   position: absolute;
-  top: 422px;
-  left: 59%;
+  top: 56%;
+  left: 61%;
   width: 21%;
 }
 
@@ -1090,7 +1100,7 @@ button.af-submit-button {
 
 .mobile-nav-menu {
   display:none;
-  top: 45% !important;
+  top: 35% !important;
 }
 
 .mobile-menu img {
@@ -1105,11 +1115,15 @@ button.af-submit-button {
     width: 100%;
   }
   .navbar {
-    justify-content: space-between;
-    display:grid;
-    position: static;
+    height:60px;
+    z-index:170;
+    margin:0 auto;
+    position:fixed;
     top:0;
-    z-index: 20;
+    left:0;
+    right:0;
+    text-align: center;
+    display: grid;
   }
 
   .mobile-nav-menu {
@@ -1154,23 +1168,28 @@ button.af-submit-button {
 
   .background-img {
     position: absolute;
-    left: auto;
-    top: -97%;
+    left: 17%;
+    top: 2%;
     width: 60%;
-    
+    height: 100%;
   }
 
   .title {
-    top:0;
-    width: 90%;
+    top: 0;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
   }
 
   .title h1 {
-    font-size: 30px;
+    font-size: 100%;
   }
 
   .title h3 {
-    font-size: 15px;
+    font-size: 100%;
+    width: 200%;
   }
   .introduction {
     width: 100%;
@@ -1209,12 +1228,19 @@ button.af-submit-button {
     width: 100vw;
   }
   .top-img {
-    width: 50vw;
-  left: 10%;
-  top: -45%;
+    width: 50%;
+    left: 21%;
+    top: 1.5%;
+    position:absolute;
   }
   .project-list {
     display: block;
+  }
+  .image-container{
+    height: 100%;
+  }
+  .project-image {
+    height: 100%;
   }
   .contact-banner {
     height: 400px;
@@ -1246,6 +1272,17 @@ button.af-submit-button {
   .plant-overlay2 {
     width: 75%;
   }
+  .plant-overlay-img2 {
+    width: 234px;
+  height: 85%;
+  position: relative;
+  left: -32%;
+  top: -14%;
+  z-index: 2;
+  object-fit: contain;
+  opacity: 0.5;
+  transform: rotate(180deg);
+  }
   .page-title h2 {
     font-size: 30px;
   }
@@ -1266,8 +1303,8 @@ button.af-submit-button {
   border-radius: 50%;
   z-index: 10;
   position: relative;
-  top: 27%;
-  left: 24%;
+  top: -2%;
+    left: -1%;
   }
   .profile-text-container{
     width: 90%;
@@ -1321,7 +1358,7 @@ button.af-submit-button {
     width: 80%;
   }
   .fact-separator{
-    top: 38%;
+    top: 11%;
   left: 22%;
   width: 51%;
   }
@@ -1330,6 +1367,13 @@ button.af-submit-button {
   }
   .fun-fact{
     font-size: 18px;
+  }
+
+  .projects-summary {
+    padding: 10%;
+    margin: 0;
+    position: relative;
+    padding-top: 15%;
   }
   
   .project-type-container {
@@ -1349,7 +1393,9 @@ button.af-submit-button {
   }
   .project-decoration{
     top: 87%;
-  right: 33%;
+    right: 25%;
+    width: 48%;
+    height: auto;
   }
   .img {
     width: 100%;
@@ -1363,7 +1409,14 @@ button.af-submit-button {
     padding: 0.1rem !important;
   }
   .top-img3 {
-    margin-top: -7rem;
+    width: 23%;
+    left: 39%;
+    top: -39%;
+  }
+
+  .top-img2 {
+    left: auto;
+    width: auto;
   }
   .af-form {
     width: 80%;
@@ -1374,6 +1427,18 @@ button.af-submit-button {
   }
   .coding-links {
     width: 100%;
+  }
+  .contact-banner-background {
+    display: none;
+  }
+  .mobile-contact {
+    display: block;
+    position: absolute;
+    transform: rotate(180deg);
+    top: -50%;
+  }
+  a.contact-button {
+    font-size: 15px;
   }
 }
 
