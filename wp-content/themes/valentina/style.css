@@ -447,7 +447,7 @@ align-content: center;
   height: auto;
   position: relative;
   left: -32%;
-  top: -34%;
+  top: -14%;
   z-index: 2;
 }
 
@@ -541,6 +541,7 @@ a.contact-button:hover {
   display: flex;
   position:relative;
   justify-items: center;
+  cursor: pointer;
 }
 
 .footer-meta {
@@ -799,11 +800,11 @@ p#result:empty:not(:focus)::before {
 .fact-separator {
   position: absolute;
   transform: rotate(90deg);
+  top: 2%;
   left: 30%;
   width: 36%;
   z-index: 10;
-  height: 200%;
-  top: -63%;
+  height: 100%;
 }
 
 .fact-container {
@@ -865,8 +866,7 @@ p#result:empty:not(:focus)::before {
   height: 56%;
   right: 81%;
   user-select: none;
-  pointer-events: none;
-  top: 68%;
+  pointer-events:none;
 }
 
 .project-type-link {
@@ -969,9 +969,9 @@ a.fcc-link {
 .top-img3 {
   display: block;
   position: absolute;
-  height: 170%;
-  left: 32%;
-  top: -47%;
+  height: 100%;
+  left: 47%;
+  top: -35%;
   transform: rotate(90deg);
   user-select: none;
   pointer-events:none;
@@ -1090,7 +1090,7 @@ button.af-submit-button {
 .leaf3 {
   transform: rotate(180deg);
   position: absolute;
-  top: 63%;
+  top: 56%;
   left: 61%;
   width: 21%;
 }
@@ -1117,7 +1117,7 @@ button.af-submit-button {
   }
   .navbar {
     height:60px;
-    z-index:170;
+    z-index:10;
     margin:0 auto;
     position:fixed;
     top:0;
@@ -1230,10 +1230,7 @@ button.af-submit-button {
     width: 100vw;
   }
   .top-img {
-    width: 50%;
-    left: 21%;
-    top: 1.5%;
-    position:absolute;
+    display: none;
   }
   .project-list {
     display: block;
@@ -1450,8 +1447,7 @@ button.af-submit-button {
     width: 80%;
   }
   .leaf3 {
-    top: 551px;
-  left: 73%;
+    display: none;
   }
   .coding-links {
     width: 100%;
@@ -1469,6 +1465,9 @@ button.af-submit-button {
   }
   a.contact-button {
     font-size: 15px;
+  }
+  div.page-title {
+    padding-top: 60px;
   }
 }
 
