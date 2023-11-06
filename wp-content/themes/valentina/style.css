@@ -1049,7 +1049,7 @@ a.fcc-link {
 }
 
 .acf-field textarea {
-  resize: none;
+  resize: none !important;
 }
 
 
@@ -1213,6 +1213,9 @@ button.af-submit-button {
   }
   .intro-title {
     padding-right: 0px;
+    display: grid;
+    align-items: center;
+    text-align: center;
   }
   .background {
     width: 100vw;
@@ -1223,6 +1226,7 @@ button.af-submit-button {
   
   h2 {
     font-size: 20px;
+    text-align: center;
   }
   
   p {
@@ -1282,8 +1286,8 @@ button.af-submit-button {
   }
   .plant-overlay-img2 {
     width: 234px;
-  height: 85%;
-  position: relative;
+  height: 100%;
+  position: absolute;
   left: -32%;
   top: -14%;
   z-index: 2;
@@ -1391,8 +1395,8 @@ button.af-submit-button {
     position: relative;
   }
   .fact-separator{
-    top: -64%;
-    left: 22%;
+    top: -41%;
+    left: 24%;
     height: 199%;
     width: 48%;
   }
@@ -1417,6 +1421,7 @@ button.af-submit-button {
   .project-type-container {
     display: block;
     padding: 1rem;
+    position: relative;
   }
   .project-background-container, .project-background {
     width: 100%;
