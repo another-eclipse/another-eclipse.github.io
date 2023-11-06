@@ -1121,7 +1121,7 @@ button.af-submit-button {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
   #navmenu, .icon, .logo {
     display: none;
     width: 100%;
@@ -1172,7 +1172,7 @@ button.af-submit-button {
 
 /* Mobile Home */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
   .start {
     width: 100%;
     height: 400px;
