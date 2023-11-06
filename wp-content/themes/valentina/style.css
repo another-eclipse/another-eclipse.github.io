@@ -829,6 +829,7 @@ p#result:empty:not(:focus)::before {
   background-color:#cad8d6;
   outline: 2px solid rgb(255, 255, 255);
   outline-offset: -20px;
+  position: relative;
  
 }
 
