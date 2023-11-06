@@ -1300,12 +1300,14 @@ button.af-submit-button {
   }
   .p-title {
     padding: 1rem;
+    text-align: center;
   }
   .about-me-intro{
     display: grid;
   }
   .profile-container{
     width: 90%;
+    height: auto;
   }
   .profile-overlay {
     top: 5%;
@@ -1395,10 +1397,9 @@ button.af-submit-button {
     position: relative;
   }
   .fact-separator{
-    top: -41%;
-    left: 24%;
-    height: 199%;
-    width: 48%;
+    top: -73%;
+    left: 31%;
+    height: 174%;
   }
   a#select{
     position:relative;
@@ -1453,8 +1454,9 @@ button.af-submit-button {
     padding: 0.1rem !important;
   }
   .top-img3 {
-   left: 13%;
-    top: -27%;
+    left: 39%;
+    top: -39%;
+    width: 22%;
   }
 
   .top-img2 {
