@@ -163,6 +163,7 @@ p {
   align-items: center;
   align-self: center;
   color: white;
+  flex: 1;
 }
 
 ul {
@@ -176,8 +177,8 @@ li {
   font-weight: 400;
   display: flex;
   justify-content: space-evenly;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 a {
@@ -195,7 +196,7 @@ a:hover, .mobile-menu:hover{
 
 .logo {
   display: flex;
-  position: flex-start;
+  flex: none;
 }
 .custom-logo {
   height: 60px;
@@ -233,7 +234,7 @@ img.custom-logo:hover {
 
  .icons {
   display: flex;
-  position: flex-end;
+  flex: none;
  }
  .icon {
   height: 36px;
@@ -293,6 +294,7 @@ align-content: center;
   justify-content: center;
   height: 600px;
   z-index: 2;
+  overflow: hidden;
 }
 
 .intro-text {
@@ -390,6 +392,8 @@ align-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-container {
@@ -443,11 +447,12 @@ align-content: center;
 }
 .plant-overlay-img2 {
   transform: rotate(90deg);
-  width: 285px;
+  width: 353px;
   height: auto;
-  position: relative;
-  left: -32%;
-  top:  -33%;;
+  display: block;
+  position: absolute;
+  left: 39%;
+  top: -153%;
   z-index: 2;
 }
 
@@ -548,7 +553,7 @@ a.contact-button:hover {
   background-color: #66785b;
   display: flex;
   position: inline;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1%;
   width: 100%;
   color: white;
@@ -748,11 +753,9 @@ a.contact-button:hover {
 #select {
   cursor: pointer;
   user-select: none;
-  margin: 1rem;
   width: 90%;
   background-color: white;
-  padding-bottom: 2.5rem;
-  padding-top: 2.5rem;
+  padding-bottom: 1rem;
   color: black;
   opacity: 0;
 }
@@ -768,7 +771,7 @@ p#result {
   position: relative;
   padding: 1rem;
   align-content: center;
-  height: 100px;
+  height: auto;
   background-color: #ffffff;
 }
 
@@ -864,9 +867,11 @@ p#result:empty:not(:focus)::before {
 .project-decoration {
   position: absolute;
   height: 56%;
-  right: 81%;
+  right: 54%;
   user-select: none;
-  pointer-events:none;
+  pointer-events: none;
+  z-index: 10;
+  bottom: -14%;
 }
 
 .project-type-link {
@@ -915,10 +920,9 @@ p#result:empty:not(:focus)::before {
 }
 
 a.fcc-link {
-  color: black;
+  color:#904a3c;
   font-family: 'Gill';
   font-size: 18px;
-  text-decoration-line: underline;
 }
 
 
@@ -974,7 +978,7 @@ a.fcc-link {
   top: -35%;
   transform: rotate(90deg);
   user-select: none;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 /* Sewing */
@@ -998,7 +1002,7 @@ a.fcc-link {
 
 .img {
   position: relative;
-  width: 280px;
+  width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 5px;
@@ -1036,12 +1040,16 @@ a.fcc-link {
 
 .af-form {
   display: block;
-  
+  position: relative;
   width: 40%;
   background:#ffffff;
   padding: 3rem;
   outline: 1px solid rgb(0, 0, 0);
   outline-offset: -20px;
+}
+
+.acf-field textarea {
+  resize: none;
 }
 
 
@@ -1090,8 +1098,8 @@ button.af-submit-button {
 .leaf3 {
   transform: rotate(180deg);
   position: absolute;
-  top: 56%;
-  left: 61%;
+  bottom: 0;
+  right: 20%;
   width: 21%;
 }
 
@@ -1117,7 +1125,7 @@ button.af-submit-button {
   }
   .navbar {
     height:60px;
-    z-index:10;
+    z-index:22;
     margin:0 auto;
     position:fixed;
     top:0;
@@ -1220,6 +1228,7 @@ button.af-submit-button {
   p {
     font-size: 15px;
     padding: 10px;
+    text-align: justify;
   }
   
   .separator-img{
@@ -1363,7 +1372,7 @@ button.af-submit-button {
     opacity: 1;
   }
   .overlay1{
-    top: 0%;
+    top: 26%;
     right: auto;
   }
   .title1, .title2, .title3 {
@@ -1373,18 +1382,19 @@ button.af-submit-button {
   }
 
   .overlay2, .overlay3 {
-    top: 0%;
+    top: 26%;
     right: auto;
   }
   .fact-container{
     display: block;
     width: 80%;
+    position: relative;
   }
   .fact-separator{
-    top: -31%;
+    top: -64%;
     left: 22%;
-    height: 98%;
-    width: 50%;
+    height: 199%;
+    width: 48%;
   }
   a#select{
     position:relative;
@@ -1398,6 +1408,10 @@ button.af-submit-button {
     margin: 0;
     position: relative;
     padding-top: 15%;
+  }
+
+  .projects-summary p {
+    text-align: center;
   }
   
   .project-type-container {
@@ -1434,7 +1448,7 @@ button.af-submit-button {
     padding: 0.1rem !important;
   }
   .top-img3 {
-   left: 5%;
+   left: 13%;
     top: -27%;
   }
 
@@ -1458,7 +1472,7 @@ button.af-submit-button {
     display: block;
     position: absolute;
     transform: rotate(180deg);
-    top: -64%;
+    top: -76%;
     width: 100%;
     height: 100%;
   }
