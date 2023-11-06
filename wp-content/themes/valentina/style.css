@@ -772,7 +772,7 @@ p#result {
   position: relative;
   padding: 1rem;
   align-content: center;
-  height: auto;
+  height: 180px;
   background-color: #ffffff;
   padding-top: 2rem;
 }
@@ -1469,6 +1469,9 @@ button.af-submit-button {
   }
   .af-form {
     width: 80%;
+  }
+  p#result {
+    height: 180px;
   }
   .leaf3 {
     display: none;
