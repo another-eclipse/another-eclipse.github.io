@@ -758,6 +758,7 @@ a.contact-button:hover {
   padding-bottom: 1rem;
   color: black;
   opacity: 0;
+  padding: 1rem;
 }
 
 a#select { 
@@ -773,6 +774,7 @@ p#result {
   align-content: center;
   height: auto;
   background-color: #ffffff;
+  padding-top: 2rem;
 }
 
 p#result:empty:not(:focus)::before {
@@ -1395,6 +1397,7 @@ button.af-submit-button {
     display: block;
     width: 80%;
     position: relative;
+    height: 275px;
   }
   .fact-separator{
     top: -73%;
