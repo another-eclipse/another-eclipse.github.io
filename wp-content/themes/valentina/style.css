@@ -1399,11 +1399,13 @@ button.af-submit-button {
     width: 80%;
     position: relative;
     height: 275px;
+    overflow: hidden;
   }
   .fact-separator{
-    top: -73%;
-    left: 31%;
+    top: -79%;
+    left: 34%;
     height: 174%;
+    width: 29%;
   }
   a#select{
     position:relative;
