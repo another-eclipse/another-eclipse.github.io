@@ -1118,6 +1118,7 @@ button.af-submit-button {
 .mobile-menu img {
   height: 40px;
   width: 40px;
+  z-index: 30;
 }
 
 
