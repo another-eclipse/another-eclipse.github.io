@@ -1148,6 +1148,27 @@ button.af-submit-button {
     position: absolute;
     left: 5%;
   }
+
+  .mobile-menu a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .mobile-menu h2 {
+    margin-bottom: 0;
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+
+  .menu-icon {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-icon:hover {
+    filter: drop-shadow(0px 0px 10px white);
+  }
+  
   .navitem {
     display: flex;
     padding: 15px;
@@ -1362,9 +1383,7 @@ button.af-submit-button {
     height: auto;
     justify-content: center;
   }
-  .menu-icon {
-    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(240deg) brightness(104%) contrast(102%);
-  }
+
 
   .family-container {
    transform: scale(0.8);
