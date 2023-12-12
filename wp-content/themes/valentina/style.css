@@ -163,6 +163,7 @@ p {
   align-items: center;
   align-self: center;
   color: white;
+  flex: 1;
 }
 
 ul {
@@ -176,8 +177,8 @@ li {
   font-weight: 400;
   display: flex;
   justify-content: space-evenly;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 a {
@@ -195,7 +196,7 @@ a:hover, .mobile-menu:hover{
 
 .logo {
   display: flex;
-  position: flex-start;
+  flex: none;
 }
 .custom-logo {
   height: 60px;
@@ -233,7 +234,7 @@ img.custom-logo:hover {
 
  .icons {
   display: flex;
-  position: flex-end;
+  flex: none;
  }
  .icon {
   height: 36px;
@@ -293,6 +294,7 @@ align-content: center;
   justify-content: center;
   height: 600px;
   z-index: 2;
+  overflow: hidden;
 }
 
 .intro-text {
@@ -390,6 +392,8 @@ align-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .project-container {
@@ -443,11 +447,12 @@ align-content: center;
 }
 .plant-overlay-img2 {
   transform: rotate(90deg);
-  width: 285px;
+  width: 353px;
   height: auto;
-  position: relative;
-  left: -32%;
-  top: -14%;
+  display: block;
+  position: absolute;
+  left: 39%;
+  top: -153%;
   z-index: 2;
 }
 
@@ -485,7 +490,7 @@ align-content: center;
   justify-content: center;
   background-color: white;
   color: black;
-  width: 100%;
+  width: 90%;
   margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
@@ -548,7 +553,7 @@ a.contact-button:hover {
   background-color: #66785b;
   display: flex;
   position: inline;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1%;
   width: 100%;
   color: white;
@@ -633,7 +638,7 @@ a.contact-button:hover {
 .hobby-text {
   display: grid;
   position: relative;
-  height: 700px;
+  height: auto;
   margin-right: 1rem;
   width: 50%;
   padding: 3rem;
@@ -748,13 +753,12 @@ a.contact-button:hover {
 #select {
   cursor: pointer;
   user-select: none;
-  margin: 1rem;
   width: 90%;
   background-color: white;
-  padding-bottom: 2.5rem;
-  padding-top: 2.5rem;
+  padding-bottom: 1rem;
   color: black;
   opacity: 0;
+  padding: 1rem;
 }
 
 a#select { 
@@ -768,8 +772,9 @@ p#result {
   position: relative;
   padding: 1rem;
   align-content: center;
-  height: 100px;
+  height: 180px;
   background-color: #ffffff;
+  padding-top: 2rem;
 }
 
 p#result:empty:not(:focus)::before {
@@ -800,11 +805,11 @@ p#result:empty:not(:focus)::before {
 .fact-separator {
   position: absolute;
   transform: rotate(90deg);
-  top: 2%;
+  top: -97%;
   left: 30%;
-  width: 36%;
+  width: 38%;
   z-index: 10;
-  height: 100%;
+  height: 233%;
 }
 
 .fact-container {
@@ -824,6 +829,7 @@ p#result:empty:not(:focus)::before {
   background-color:#cad8d6;
   outline: 2px solid rgb(255, 255, 255);
   outline-offset: -20px;
+  position: relative;
  
 }
 
@@ -864,9 +870,11 @@ p#result:empty:not(:focus)::before {
 .project-decoration {
   position: absolute;
   height: 56%;
-  right: 81%;
+  right: 54%;
   user-select: none;
-  pointer-events:none;
+  pointer-events: none;
+  z-index: 10;
+  bottom: -14%;
 }
 
 .project-type-link {
@@ -915,10 +923,9 @@ p#result:empty:not(:focus)::before {
 }
 
 a.fcc-link {
-  color: black;
+  color:#904a3c;
   font-family: 'Gill';
   font-size: 18px;
-  text-decoration-line: underline;
 }
 
 
@@ -971,10 +978,10 @@ a.fcc-link {
   position: absolute;
   height: 100%;
   left: 47%;
-  top: -35%;
+  top: -36%;
   transform: rotate(90deg);
   user-select: none;
-  pointer-events:none;
+  pointer-events: none;
 }
 
 /* Sewing */
@@ -998,7 +1005,7 @@ a.fcc-link {
 
 .img {
   position: relative;
-  width: 280px;
+  width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 5px;
@@ -1036,12 +1043,16 @@ a.fcc-link {
 
 .af-form {
   display: block;
-  
+  position: relative;
   width: 40%;
   background:#ffffff;
   padding: 3rem;
   outline: 1px solid rgb(0, 0, 0);
   outline-offset: -20px;
+}
+
+.acf-field textarea {
+  resize: none !important;
 }
 
 
@@ -1090,8 +1101,8 @@ button.af-submit-button {
 .leaf3 {
   transform: rotate(180deg);
   position: absolute;
-  top: 56%;
-  left: 61%;
+  bottom: 0;
+  right: 20%;
   width: 21%;
 }
 
@@ -1110,14 +1121,14 @@ button.af-submit-button {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   #navmenu, .icon, .logo {
     display: none;
     width: 100%;
   }
   .navbar {
     height:60px;
-    z-index:10;
+    z-index:22;
     margin:0 auto;
     position:fixed;
     top:0;
@@ -1131,6 +1142,7 @@ button.af-submit-button {
     top: 35%;
     position: relative;
     z-index: 20;
+  }
   }
   .mobile-menu {
     display: flex;
@@ -1180,7 +1192,7 @@ button.af-submit-button {
 
 /* Mobile Home */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
   .start {
     width: 100%;
     height: 400px;
@@ -1224,6 +1236,9 @@ button.af-submit-button {
   }
   .intro-title {
     padding-right: 0px;
+    display: grid;
+    align-items: center;
+    text-align: center;
   }
   .background {
     width: 100vw;
@@ -1234,11 +1249,13 @@ button.af-submit-button {
   
   h2 {
     font-size: 20px;
+    text-align: center;
   }
   
   p {
     font-size: 15px;
     padding: 10px;
+    text-align: justify;
   }
   
   .separator-img{
@@ -1281,7 +1298,7 @@ button.af-submit-button {
     width: 50%;
   }
   .footer-meta-item{
-    font-size: 10px;
+    font-size: 6px;
 
   }
   .footer-item {
@@ -1292,8 +1309,8 @@ button.af-submit-button {
   }
   .plant-overlay-img2 {
     width: 234px;
-  height: 85%;
-  position: relative;
+  height: 100%;
+  position: absolute;
   left: -32%;
   top: -14%;
   z-index: 2;
@@ -1306,12 +1323,14 @@ button.af-submit-button {
   }
   .p-title {
     padding: 1rem;
+    text-align: center;
   }
   .about-me-intro{
     display: grid;
   }
   .profile-container{
     width: 90%;
+    height: auto;
   }
   .profile-overlay {
     top: 5%;
@@ -1323,7 +1342,7 @@ button.af-submit-button {
   border-radius: 50%;
   z-index: 10;
   position: relative;
-  top: -2%;
+  top: 0%;
     left: -1%;
   }
   .profile-text-container{
@@ -1363,7 +1382,6 @@ button.af-submit-button {
     height: auto;
     justify-content: center;
   }
-  
 
   .family-container {
    transform: scale(0.8);
@@ -1380,7 +1398,7 @@ button.af-submit-button {
     opacity: 1;
   }
   .overlay1{
-    top: 0%;
+    top: 26%;
     right: auto;
   }
   .title1, .title2, .title3 {
@@ -1390,18 +1408,21 @@ button.af-submit-button {
   }
 
   .overlay2, .overlay3 {
-    top: 0%;
+    top: 26%;
     right: auto;
   }
   .fact-container{
     display: block;
     width: 80%;
+    position: relative;
+    height: 275px;
+    overflow: hidden;
   }
   .fact-separator{
-    top: -31%;
-    left: 22%;
-    height: 98%;
-    width: 50%;
+    top: -79%;
+    left: 34%;
+    height: 174%;
+    width: 29%;
   }
   a#select{
     position:relative;
@@ -1416,10 +1437,15 @@ button.af-submit-button {
     position: relative;
     padding-top: 15%;
   }
+
+  .projects-summary p {
+    text-align: center;
+  }
   
   .project-type-container {
     display: block;
     padding: 1rem;
+    position: relative;
   }
   .project-background-container, .project-background {
     width: 100%;
@@ -1451,9 +1477,9 @@ button.af-submit-button {
     padding: 0.1rem !important;
   }
   .top-img3 {
-    width: 23%;
     left: 39%;
-    top: -41%;
+    top: -42%;
+    width: 22%;
   }
 
   .top-img2 {
@@ -1462,6 +1488,9 @@ button.af-submit-button {
   }
   .af-form {
     width: 80%;
+  }
+  p#result {
+    height: 180px;
   }
   .leaf3 {
     display: none;
@@ -1476,7 +1505,7 @@ button.af-submit-button {
     display: block;
     position: absolute;
     transform: rotate(180deg);
-    top: -64%;
+    top: -76%;
     width: 100%;
     height: 100%;
   }
@@ -1487,4 +1516,3 @@ button.af-submit-button {
     padding-top: 60px;
   }
 }
-
