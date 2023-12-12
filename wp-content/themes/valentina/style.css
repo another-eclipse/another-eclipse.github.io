@@ -163,7 +163,6 @@ p {
   align-items: center;
   align-self: center;
   color: white;
-  flex: 1;
 }
 
 ul {
@@ -177,8 +176,8 @@ li {
   font-weight: 400;
   display: flex;
   justify-content: space-evenly;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 a {
@@ -196,7 +195,7 @@ a:hover, .mobile-menu:hover{
 
 .logo {
   display: flex;
-  flex: none;
+  position: flex-start;
 }
 .custom-logo {
   height: 60px;
@@ -234,7 +233,7 @@ img.custom-logo:hover {
 
  .icons {
   display: flex;
-  flex: none;
+  position: flex-end;
  }
  .icon {
   height: 36px;
@@ -294,7 +293,6 @@ align-content: center;
   justify-content: center;
   height: 600px;
   z-index: 2;
-  overflow: hidden;
 }
 
 .intro-text {
@@ -392,8 +390,6 @@ align-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3rem;
-  position: relative;
-  overflow: hidden;
 }
 
 .project-container {
@@ -447,12 +443,11 @@ align-content: center;
 }
 .plant-overlay-img2 {
   transform: rotate(90deg);
-  width: 353px;
+  width: 285px;
   height: auto;
-  display: block;
-  position: absolute;
-  left: 39%;
-  top: -153%;
+  position: relative;
+  left: -32%;
+  top: -14%;
   z-index: 2;
 }
 
@@ -490,7 +485,7 @@ align-content: center;
   justify-content: center;
   background-color: white;
   color: black;
-  width: 90%;
+  width: 100%;
   margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
@@ -553,7 +548,7 @@ a.contact-button:hover {
   background-color: #66785b;
   display: flex;
   position: inline;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1%;
   width: 100%;
   color: white;
@@ -638,7 +633,7 @@ a.contact-button:hover {
 .hobby-text {
   display: grid;
   position: relative;
-  height: auto;
+  height: 700px;
   margin-right: 1rem;
   width: 50%;
   padding: 3rem;
@@ -753,12 +748,13 @@ a.contact-button:hover {
 #select {
   cursor: pointer;
   user-select: none;
+  margin: 1rem;
   width: 90%;
   background-color: white;
-  padding-bottom: 1rem;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem;
   color: black;
   opacity: 0;
-  padding: 1rem;
 }
 
 a#select { 
@@ -772,9 +768,8 @@ p#result {
   position: relative;
   padding: 1rem;
   align-content: center;
-  height: 180px;
+  height: 100px;
   background-color: #ffffff;
-  padding-top: 2rem;
 }
 
 p#result:empty:not(:focus)::before {
@@ -805,11 +800,11 @@ p#result:empty:not(:focus)::before {
 .fact-separator {
   position: absolute;
   transform: rotate(90deg);
-  top: -97%;
+  top: 2%;
   left: 30%;
-  width: 38%;
+  width: 36%;
   z-index: 10;
-  height: 233%;
+  height: 100%;
 }
 
 .fact-container {
@@ -829,7 +824,6 @@ p#result:empty:not(:focus)::before {
   background-color:#cad8d6;
   outline: 2px solid rgb(255, 255, 255);
   outline-offset: -20px;
-  position: relative;
  
 }
 
@@ -870,11 +864,9 @@ p#result:empty:not(:focus)::before {
 .project-decoration {
   position: absolute;
   height: 56%;
-  right: 54%;
+  right: 81%;
   user-select: none;
-  pointer-events: none;
-  z-index: 10;
-  bottom: -14%;
+  pointer-events:none;
 }
 
 .project-type-link {
@@ -923,9 +915,10 @@ p#result:empty:not(:focus)::before {
 }
 
 a.fcc-link {
-  color:#904a3c;
+  color: black;
   font-family: 'Gill';
   font-size: 18px;
+  text-decoration-line: underline;
 }
 
 
@@ -978,10 +971,10 @@ a.fcc-link {
   position: absolute;
   height: 100%;
   left: 47%;
-  top: -36%;
+  top: -35%;
   transform: rotate(90deg);
   user-select: none;
-  pointer-events: none;
+  pointer-events:none;
 }
 
 /* Sewing */
@@ -1005,7 +998,7 @@ a.fcc-link {
 
 .img {
   position: relative;
-  width: 100%;
+  width: 280px;
   height: 280px;
   object-fit: cover;
   border-radius: 5px;
@@ -1043,16 +1036,12 @@ a.fcc-link {
 
 .af-form {
   display: block;
-  position: relative;
+  
   width: 40%;
   background:#ffffff;
   padding: 3rem;
   outline: 1px solid rgb(0, 0, 0);
   outline-offset: -20px;
-}
-
-.acf-field textarea {
-  resize: none !important;
 }
 
 
@@ -1101,8 +1090,8 @@ button.af-submit-button {
 .leaf3 {
   transform: rotate(180deg);
   position: absolute;
-  bottom: 0;
-  right: 20%;
+  top: 56%;
+  left: 61%;
   width: 21%;
 }
 
@@ -1116,19 +1105,19 @@ button.af-submit-button {
 }
 
 .mobile-menu img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
 }
 
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 800px) {
   #navmenu, .icon, .logo {
     display: none;
     width: 100%;
   }
   .navbar {
     height:60px;
-    z-index:22;
+    z-index:10;
     margin:0 auto;
     position:fixed;
     top:0;
@@ -1147,6 +1136,25 @@ button.af-submit-button {
     display: flex;
     position: absolute;
     left: 5%;
+  }
+
+  .mobile-menu a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu-icon {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-icon:hover {
+    filter: drop-shadow(0px 0px 10px white);
+  }
+
+  .mobile-menu h2{
+    margin-bottom: 0;
+    font-size: 30px;
   }
   .navitem {
     display: flex;
@@ -1172,7 +1180,7 @@ button.af-submit-button {
 
 /* Mobile Home */
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 800px) {
   .start {
     width: 100%;
     height: 400px;
@@ -1216,9 +1224,6 @@ button.af-submit-button {
   }
   .intro-title {
     padding-right: 0px;
-    display: grid;
-    align-items: center;
-    text-align: center;
   }
   .background {
     width: 100vw;
@@ -1229,13 +1234,11 @@ button.af-submit-button {
   
   h2 {
     font-size: 20px;
-    text-align: center;
   }
   
   p {
     font-size: 15px;
     padding: 10px;
-    text-align: justify;
   }
   
   .separator-img{
@@ -1278,7 +1281,7 @@ button.af-submit-button {
     width: 50%;
   }
   .footer-meta-item{
-    font-size: 6px;
+    font-size: 10px;
 
   }
   .footer-item {
@@ -1289,8 +1292,8 @@ button.af-submit-button {
   }
   .plant-overlay-img2 {
     width: 234px;
-  height: 100%;
-  position: absolute;
+  height: 85%;
+  position: relative;
   left: -32%;
   top: -14%;
   z-index: 2;
@@ -1303,14 +1306,12 @@ button.af-submit-button {
   }
   .p-title {
     padding: 1rem;
-    text-align: center;
   }
   .about-me-intro{
     display: grid;
   }
   .profile-container{
     width: 90%;
-    height: auto;
   }
   .profile-overlay {
     top: 5%;
@@ -1322,7 +1323,7 @@ button.af-submit-button {
   border-radius: 50%;
   z-index: 10;
   position: relative;
-  top: 0%;
+  top: -2%;
     left: -1%;
   }
   .profile-text-container{
@@ -1362,9 +1363,7 @@ button.af-submit-button {
     height: auto;
     justify-content: center;
   }
-  .menu-icon {
-    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(240deg) brightness(104%) contrast(102%);
-  }
+  
 
   .family-container {
    transform: scale(0.8);
@@ -1381,7 +1380,7 @@ button.af-submit-button {
     opacity: 1;
   }
   .overlay1{
-    top: 26%;
+    top: 0%;
     right: auto;
   }
   .title1, .title2, .title3 {
@@ -1391,21 +1390,18 @@ button.af-submit-button {
   }
 
   .overlay2, .overlay3 {
-    top: 26%;
+    top: 0%;
     right: auto;
   }
   .fact-container{
     display: block;
     width: 80%;
-    position: relative;
-    height: 275px;
-    overflow: hidden;
   }
   .fact-separator{
-    top: -79%;
-    left: 34%;
-    height: 174%;
-    width: 29%;
+    top: -31%;
+    left: 22%;
+    height: 98%;
+    width: 50%;
   }
   a#select{
     position:relative;
@@ -1420,15 +1416,10 @@ button.af-submit-button {
     position: relative;
     padding-top: 15%;
   }
-
-  .projects-summary p {
-    text-align: center;
-  }
   
   .project-type-container {
     display: block;
     padding: 1rem;
-    position: relative;
   }
   .project-background-container, .project-background {
     width: 100%;
@@ -1460,9 +1451,9 @@ button.af-submit-button {
     padding: 0.1rem !important;
   }
   .top-img3 {
+    width: 23%;
     left: 39%;
-    top: -42%;
-    width: 22%;
+    top: -41%;
   }
 
   .top-img2 {
@@ -1471,9 +1462,6 @@ button.af-submit-button {
   }
   .af-form {
     width: 80%;
-  }
-  p#result {
-    height: 180px;
   }
   .leaf3 {
     display: none;
@@ -1488,7 +1476,7 @@ button.af-submit-button {
     display: block;
     position: absolute;
     transform: rotate(180deg);
-    top: -76%;
+    top: -64%;
     width: 100%;
     height: 100%;
   }
