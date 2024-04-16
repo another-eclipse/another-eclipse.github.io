@@ -94,19 +94,9 @@ p, h1, h2, h3, h4, h5, h6 {
 main {
   min-height: 100%;
   background-color: #ffffff;
-  animation: fadeInAnimation ease 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-  }
+
 
 h1 {
   font-family: 'ModernLove';
