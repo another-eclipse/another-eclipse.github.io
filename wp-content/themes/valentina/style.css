@@ -398,6 +398,8 @@ align-content: center;
 
 .project-container {
   background-color: #904a3c;
+  display: grid;
+  justify-content: center;
   padding: 3rem;
   overflow: hidden;
   color: rgb(255, 255, 255);
@@ -415,6 +417,7 @@ align-content: center;
   overflow: hidden;
   object-fit: cover;
   z-index: 6;
+  justify-content: center;
 }
 
 .project-image {
