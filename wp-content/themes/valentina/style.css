@@ -851,7 +851,7 @@ p#result:empty:not(:focus)::before {
 
 .project-background {
   height: 100%;
-  width: 400px;
+  width: 100%;
   object-fit: cover;
   transition: all 0.4s ease-in-out;
 }
@@ -908,7 +908,7 @@ p#result:empty:not(:focus)::before {
   left: 0;
   right: 0;
   height: 100%;
-  width: 400px;
+  width: 100%;
   opacity: 0;
   transition: .6s ease-in-out;
   background-color:transparent;
