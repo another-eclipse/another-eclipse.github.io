@@ -270,6 +270,7 @@ align-content: center;
   z-index: 0;
   justify-self: center;
   align-self: center;
+  pointer-events: none;
 }
 
 
@@ -324,6 +325,7 @@ align-content: center;
   height: 80%;
   z-index: 3;
   width: 100%;
+  pointer-events: none;
 }
 
 .intro-images {
@@ -363,6 +365,7 @@ align-content: center;
   height: 656px;
   top: -36px;
   right: -43px;
+  pointer-events: none;
 }
 .top-image {
   display: block;
@@ -376,7 +379,7 @@ align-content: center;
   width: 50%;
   left: 24%;
   top: -17%;
-
+  pointer-events: none;
 }
 
 .projects-summary {
@@ -457,6 +460,7 @@ align-content: center;
   left: 39%;
   top: -153%;
   z-index: 2;
+  pointer-events: none;
 }
 
 .contact-banner {
@@ -596,6 +600,7 @@ a.contact-button:hover {
   height: 32%;
   top: 53%;
   transform: rotate(-0.9turn);
+  pointer-events: none;
 }
 
 .about-me-intro, .hobby {
@@ -626,6 +631,7 @@ a.contact-button:hover {
   position: absolute;
   top: 0%;
   left: -4%;
+  pointer-events: none;
 }
 
 .profile-image {
@@ -635,7 +641,7 @@ a.contact-button:hover {
   position: absolute;
   margin: 10%;
   justify-self: center;
-
+  pointer-events: none;
 }
 
 .hobby-text {
@@ -675,6 +681,7 @@ a.contact-button:hover {
   height: 235px;
   width: 235px;
   z-index: 10;
+  pointer-events: none;
 }
 
 .overlay1 {
@@ -837,10 +844,8 @@ p#result:empty:not(:focus)::before {
 }
 
 .project-background-container {
-  display: flex;
   position: relative;
   width:100%;
-  height: 400px;
   object-fit: cover;
 }
 
@@ -1113,6 +1118,7 @@ button.af-submit-button {
   bottom: 0;
   right: 20%;
   width: 21%;
+  pointer-events: none;
 }
 
 /* Mobile */
