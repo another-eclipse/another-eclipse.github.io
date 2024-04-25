@@ -199,6 +199,10 @@ a:hover, .mobile-menu:hover{
   text-shadow: 0px 0px 10px white;
 }
 
+#wind:hover {
+  text-shadow: 0px 0px 10px white;
+}
+
 .logo {
   display: flex;
   flex: none;
@@ -287,6 +291,12 @@ align-content: center;
   color: black;
   padding: 10rem;
   z-index: 1;
+}
+
+.title-text {
+  display: flex;
+  position: absolute;
+  z-index: 20;
 }
 
 
@@ -1212,6 +1222,10 @@ button.af-submit-button {
     display: none;
   }
 }
+#wind {
+  height: 72px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(134deg) brightness(106%) contrast(104%);
+}
 
 /* Mobile Home */
 
@@ -1326,7 +1340,14 @@ button.af-submit-button {
   }
   .footer-item {
     font-size: 25px;
+    align-items: center;
   }
+
+  #wind {
+    height: 25px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(134deg) brightness(106%) contrast(104%);
+  }
+
   .plant-overlay2 {
     width: 75%;
   }
